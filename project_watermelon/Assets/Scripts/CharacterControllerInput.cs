@@ -14,6 +14,18 @@ public class CharacterControllerInput : MonoBehaviour
     [SerializeField]
     private float rotateSpeed;
 
+    [SerializeField]
+    private float gravity = -10f;
+    private float currentGravity = 0f;
+    private Vector3 _velocity;
+    private bool isGrounded = false;
+    [SerializeField]
+    private Transform groundChecker;
+    [SerializeField]
+    private float groundCheckDistance;
+    [SerializeField]
+    private LayerMask groundLayer;
+
     [Header("SFX Stuff")]
     [SerializeField] EventReference walkingSFX;
     EventInstance walkingI;
@@ -35,6 +47,21 @@ public class CharacterControllerInput : MonoBehaviour
 
     void Update()
     {
+        Gravity();
+
+        WalkingMovement();
+        
+
+        movementSFX();
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void WalkingMovement()
+    {
         movementInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         movementInput = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0) * movementInput;
         _characterController.Move(movementInput * movementSpeed * Time.deltaTime);
@@ -48,8 +75,24 @@ public class CharacterControllerInput : MonoBehaviour
                     rotateSpeed * Time.deltaTime);
             transform.rotation = targetRotation;
         }
+    }
 
-        movementSFX();
+    private void Gravity()
+    {
+        _velocity.y = _characterController.velocity.y;
+
+        Debug.Log(_velocity.y);
+
+        isGrounded = Physics.CheckSphere(groundChecker.position, groundCheckDistance, groundLayer, QueryTriggerInteraction.Ignore);
+
+        _velocity.y += gravity * Time.deltaTime;
+
+        if (isGrounded && _velocity.y < 0f)
+        {
+            _velocity.y = 0f;
+        }
+
+        _characterController.Move(new Vector3(0, _velocity.y, 0));      
     }
 
     void movementSFX()
