@@ -37,13 +37,19 @@ public class CharacterControllerInput : MonoBehaviour
     {
         movementInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         movementInput = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0) * movementInput;
-        //movementInput = transform.TransformDirection(movementInput);
         _characterController.Move(movementInput * movementSpeed * Time.deltaTime);
 
-        transform.LookAt(new Vector3(movementInput.x, 0, movementInput.z));
+        if (movementInput != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(movementInput);
+            targetRotation = Quaternion.RotateTowards(
+                    transform.rotation,
+                    targetRotation,
+                    rotateSpeed * Time.deltaTime);
+            transform.rotation = targetRotation;
+        }
+
         movementSFX();
-
-
     }
 
     void movementSFX()
