@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3ff745c7-2c48-4891-8789-5206b9311dec}">
+		<property name="assetPath">
+			<value>Birds-003.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.063673469387755</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2024e9b-f71a-4278-aebe-c8597d46ce4f}</destination>
+		</relationship>
+	</object>
+</objects>
