@@ -81,6 +81,9 @@ public class CharacterControllerInput : MonoBehaviour
     {
         _velocity.y = _characterController.velocity.y;
 
+        if (_velocity.y > 0)
+            _velocity.y = 0; //cancels velocity of running upstairs to avoid hops
+
         Debug.Log(_velocity.y);
 
         isGrounded = Physics.CheckSphere(groundChecker.position, groundCheckDistance, groundLayer, QueryTriggerInteraction.Ignore);
