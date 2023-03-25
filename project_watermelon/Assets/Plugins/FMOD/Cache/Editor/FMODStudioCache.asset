@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 7582951042072186160}
   MinDistance: 1
   MaxDistance: 20
-  Length: 323
+  Length: 406
 --- !u!114 &-8706720856224598256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55,6 +55,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 375
+--- !u!114 &-8575621712821083585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/CarCrash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/CarCrash
+  Guid:
+    Data1: -650876006
+    Data2: 1205009127
+    Data3: -1428449630
+    Data4: -1674232893
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &-8443076264314953184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +184,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-1435353215487201804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiences/Ambience
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiences/Ambience
+  Guid:
+    Data1: -38049662
+    Data2: 1220565088
+    Data3: 1520341932
+    Data4: -1004311254
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33016
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,17 +231,75 @@ MonoBehaviour:
   - {fileID: -7261386271969170427}
   - {fileID: -8706720856224598256}
   - {fileID: -9105882511073218184}
-  - {fileID: 9160912415099532297}
   - {fileID: 5901646626880684864}
   - {fileID: 8233750094061855256}
+  - {fileID: 1338933347980969845}
+  - {fileID: -1435353215487201804}
+  - {fileID: -8575621712821083585}
+  - {fileID: 8569413431453158425}
+  - {fileID: 4571364767420898650}
   EditorParameters:
   - {fileID: -5167407536856922683}
   MasterBanks:
   - {fileID: 7628519628431415782}
   StringsBanks:
   - {fileID: 8337069256613824038}
-  cacheTime: 638153769438905688
+  cacheTime: 638153823884040327
   cacheVersion: 131601
+--- !u!114 &1338933347980969845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/ManGrowling
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/ManGrowling
+  Guid:
+    Data1: -2017276827
+    Data2: 1088480300
+    Data3: -395352428
+    Data4: 1895205182
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2063
+--- !u!114 &4571364767420898650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemies/CarEngine
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemies/CarEngine
+  Guid:
+    Data1: -1920290346
+    Data2: 1139965606
+    Data3: -1067688543
+    Data4: -888244324
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
 --- !u!114 &5901646626880684864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,10 +367,10 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638153769438870897
+  lastModified: 638153823883974246
   FileSizes:
   - Name: Desktop
-    Value: 245024
+    Value: 707360
   Exists: 1
 --- !u!114 &8233750094061855256
 MonoBehaviour:
@@ -286,7 +398,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 574
+  Length: 523
 --- !u!114 &8337069256613824038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,12 +414,12 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638153769438905688
+  lastModified: 638153823884040327
   FileSizes:
   - Name: Desktop
-    Value: 1368
+    Value: 1576
   Exists: 1
---- !u!114 &9160912415099532297
+--- !u!114 &8569413431453158425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,20 +429,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/CarEngine
+  m_Name: event:/SFX/Dog/DogWhining
   m_EditorClassIdentifier: 
-  Path: event:/SFX/CarEngine
+  Path: event:/SFX/Dog/DogWhining
   Guid:
-    Data1: -1920290346
-    Data2: 1139965606
-    Data3: -1067688543
-    Data4: -888244324
+    Data1: 609371826
+    Data2: 1221664035
+    Data3: -196499545
+    Data4: -1652468145
   Banks:
   - {fileID: 7628519628431415782}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 12000
+  Length: 4000
