@@ -16,7 +16,7 @@ public class CharacterControllerInput : MonoBehaviour
 
     [SerializeField]
     private float gravity = -10f;
-    private float currentGravity = 0f;
+    private float currentGravity = -10f;
     private Vector3 _velocity;
     private bool isGrounded = false;
     [SerializeField]
@@ -25,6 +25,14 @@ public class CharacterControllerInput : MonoBehaviour
     private float groundCheckDistance;
     [SerializeField]
     private LayerMask groundLayer;
+
+    [SerializeField]
+    private float jumpForce;
+    [SerializeField]
+    private float jumpForceFadeSpeed;
+    private bool isJumping = false;
+    private bool jumpRequest;
+    private float jumpRequestTimer = 0.5f;
 
     [Header("SFX Stuff")]
     [SerializeField] EventReference walkingSFX;
@@ -40,6 +48,8 @@ public class CharacterControllerInput : MonoBehaviour
     {
         _characterController = GetComponent<CharacterController>();
 
+        currentGravity = gravity;
+
         //Start Sounds
         walkingI = RuntimeManager.CreateInstance(walkingSFX);
         breathingI = RuntimeManager.CreateInstance(breathingSFX);
@@ -47,17 +57,21 @@ public class CharacterControllerInput : MonoBehaviour
 
     void Update()
     {
+        isGrounded = Physics.CheckSphere(groundChecker.position, groundCheckDistance, groundLayer);
+        //isGrounded = _characterController.isGrounded;
+
+        Debug.Log(isGrounded);
+
+        if (Input.GetButtonDown("Jump"))
+            StartCoroutine(RequestJump());
+
         Gravity();
+
+        Jump();
 
         WalkingMovement();
         
-
         movementSFX();
-    }
-
-    private void FixedUpdate()
-    {
-        
     }
 
     private void WalkingMovement()
@@ -79,16 +93,17 @@ public class CharacterControllerInput : MonoBehaviour
 
     private void Gravity()
     {
+        interpolatecurrentGravityFromJumpingToFalling();
+
         _velocity.y = _characterController.velocity.y;
 
-        if (_velocity.y > 0)
+        if (isGrounded)
+            isJumping = false;
+
+        if (_velocity.y > 0 && !isJumping)
             _velocity.y = 0; //cancels velocity of running upstairs to avoid hops
 
-        Debug.Log(_velocity.y);
-
-        isGrounded = Physics.CheckSphere(groundChecker.position, groundCheckDistance, groundLayer, QueryTriggerInteraction.Ignore);
-
-        _velocity.y += gravity * Time.deltaTime;
+        _velocity.y += currentGravity * Time.deltaTime;
 
         if (isGrounded && _velocity.y < 0f)
         {
@@ -98,9 +113,39 @@ public class CharacterControllerInput : MonoBehaviour
         _characterController.Move(new Vector3(0, _velocity.y, 0));      
     }
 
+    private void Jump()
+    {
+        if (isJumping || !jumpRequest || !isGrounded)
+            return;
+        Debug.Log("Jump");
+        isJumping = true;
+        jumpRequest = false;
+        currentGravity = jumpForce;
+    }
+
+    private IEnumerator RequestJump()
+    {
+        StopCoroutine(RequestJump());
+
+        jumpRequest = true;
+
+        yield return new WaitForSeconds(jumpRequestTimer);
+
+        jumpRequest = false;
+
+        yield return null;
+    }
+
+    private void interpolatecurrentGravityFromJumpingToFalling()
+    {
+        if (currentGravity > gravity)
+            currentGravity -= jumpForceFadeSpeed * Time.deltaTime;
+
+    }
+
     void movementSFX()
     {
-        Debug.Log(breathingTimer);
+        //Debug.Log(breathingTimer);
         if (movementInput.magnitude > 0 )
         {
             if (!walkingStarted)
