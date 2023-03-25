@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{160e0d8a-5ee8-41a1-b48b-69e20bf190fe}">
+		<property name="name">
+			<value>TimeWalking</value>
+		</property>
+		<relationship name="folder">
+			<destination>{25fd6e76-b28a-4108-8514-a1d7be25692e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{adf0fbb3-e85d-4507-bba5-c2cc993ab6ba}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{adf0fbb3-e85d-4507-bba5-c2cc993ab6ba}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

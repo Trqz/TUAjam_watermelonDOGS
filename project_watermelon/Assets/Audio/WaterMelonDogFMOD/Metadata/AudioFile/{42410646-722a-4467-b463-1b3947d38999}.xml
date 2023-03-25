@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{42410646-722a-4467-b463-1b3947d38999}">
+		<property name="assetPath">
+			<value>DogWalkingRaw-002.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.57469387755102042</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2024e9b-f71a-4278-aebe-c8597d46ce4f}</destination>
+		</relationship>
+	</object>
+</objects>

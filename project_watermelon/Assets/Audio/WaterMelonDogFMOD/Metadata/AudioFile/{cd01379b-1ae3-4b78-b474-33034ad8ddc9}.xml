@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{cd01379b-1ae3-4b78-b474-33034ad8ddc9}">
+		<property name="assetPath">
+			<value>DogBarking-001.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0710204081632653</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e2024e9b-f71a-4278-aebe-c8597d46ce4f}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -768,7 +768,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734846635}
-  m_LocalRotation: {x: 0.07632195, y: -0.0000000042890496, z: 3.2830616e-10, w: 0.99708325}
+  m_LocalRotation: {x: 0.07632195, y: 0.000000004289048, z: -3.2830602e-10, w: 0.99708325}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1223,6 +1223,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   rotateSpeed: 0
+  walkingSFX:
+    Guid:
+      Data1: 1260848067
+      Data2: 1279922093
+      Data3: 48401596
+      Data4: 320909277
+    Path: event:/SFX/Dog/DogWalking
+  breathingSFX:
+    Guid:
+      Data1: -1325286692
+      Data2: 1163105813
+      Data3: 859393207
+      Data4: 1015266081
+    Path: event:/SFX/Dog/DogBreathing
+  breathingNeed: 10
 --- !u!1 &1400698900
 GameObject:
   m_ObjectHideFlags: 3
