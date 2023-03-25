@@ -43,6 +43,9 @@ public class CharacterControllerInput : MonoBehaviour
     bool breathingStarted;
     private float breathingTimer;
     [SerializeField] float breathingNeed = 10;
+    [SerializeField] EventReference jumpSFX;
+    [SerializeField] EventReference barkSFX;
+    public KeyCode keyToBark;
 
     void Start()
     {
@@ -64,6 +67,11 @@ public class CharacterControllerInput : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
             StartCoroutine(RequestJump());
+
+        if(Input.GetKeyDown(keyToBark))
+        {
+            RuntimeManager.PlayOneShot(barkSFX);
+        }
 
         Gravity();
 
@@ -121,6 +129,7 @@ public class CharacterControllerInput : MonoBehaviour
         isJumping = true;
         jumpRequest = false;
         currentGravity = jumpForce;
+        RuntimeManager.PlayOneShot(jumpSFX);
     }
 
     private IEnumerator RequestJump()
@@ -146,7 +155,7 @@ public class CharacterControllerInput : MonoBehaviour
     void movementSFX()
     {
         //Debug.Log(breathingTimer);
-        if (movementInput.magnitude > 0 )
+        if (movementInput.magnitude > 0  && isGrounded)
         {
             if (!walkingStarted)
             {

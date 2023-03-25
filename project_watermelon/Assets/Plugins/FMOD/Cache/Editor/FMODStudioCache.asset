@@ -155,12 +155,13 @@ MonoBehaviour:
   - {fileID: -9105882511073218184}
   - {fileID: 9160912415099532297}
   - {fileID: 5901646626880684864}
+  - {fileID: 8233750094061855256}
   EditorParameters: []
   MasterBanks:
   - {fileID: 7628519628431415782}
   StringsBanks:
   - {fileID: 8337069256613824038}
-  cacheTime: 638153345597394816
+  cacheTime: 638153648457722163
   cacheVersion: 131601
 --- !u!114 &5901646626880684864
 MonoBehaviour:
@@ -229,11 +230,38 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638153345597394816
+  lastModified: 638153648457641247
   FileSizes:
   - Name: Desktop
-    Value: 229120
+    Value: 242688
   Exists: 1
+--- !u!114 &8233750094061855256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dog/DogJumping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dog/DogJumping
+  Guid:
+    Data1: -1680022666
+    Data2: 1168656968
+    Data3: 1274033811
+    Data4: -43780261
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 574
 --- !u!114 &8337069256613824038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,10 +277,10 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638153345597394816
+  lastModified: 638153648457722163
   FileSizes:
   - Name: Desktop
-    Value: 1296
+    Value: 1334
   Exists: 1
 --- !u!114 &9160912415099532297
 MonoBehaviour:

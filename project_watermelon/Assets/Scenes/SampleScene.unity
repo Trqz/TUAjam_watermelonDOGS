@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1813,6 +1813,21 @@ MonoBehaviour:
       Data4: 1015266081
     Path: event:/SFX/Dog/DogBreathing
   breathingNeed: 10
+  jumpSFX:
+    Guid:
+      Data1: -1680022666
+      Data2: 1168656968
+      Data3: 1274033811
+      Data4: -43780261
+    Path: event:/SFX/Dog/DogJumping
+  barkSFX:
+    Guid:
+      Data1: -250399063
+      Data2: 1247510120
+      Data3: 420569786
+      Data4: 852645343
+    Path: event:/SFX/Dog/DogBarking
+  keyToBark: 120
 --- !u!1 &1258949765
 GameObject:
   m_ObjectHideFlags: 0
