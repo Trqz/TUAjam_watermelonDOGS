@@ -18,7 +18,7 @@ public class IdleState : State
 
     public override void Enter()
     {
-        //Debug.Log("Idle");
+        Debug.Log("Idle");
 
         idleCooldownCounter = ai.idleCooldownCounter;
         idleCooldown = ai.idleCooldown;
