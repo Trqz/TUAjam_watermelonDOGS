@@ -28,7 +28,7 @@ public class IdleState : State
         idlePatrolChance = ai.idlePatrolChance;
 
         idleCooldownCounter = 0f;
-        anim.SetTrigger("isIdle");
+        anim.SetInteger("State", 0);
 
         base.Enter();
     }

@@ -23,7 +23,7 @@ public class PursueState : State
         agent.speed = pursueSpeed;
 
         agent.isStopped = false;
-        anim.SetTrigger("isRunning");
+        anim.SetInteger("State", 2);
 
         base.Enter();
     }

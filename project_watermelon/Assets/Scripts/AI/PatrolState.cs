@@ -27,7 +27,7 @@ public class PatrolState : State
         patrolTargetLeeway = ai.patrolTargetLeeway;
         agent.speed = patrolSpeed;
 
-        anim.SetTrigger("isWalking");
+        anim.SetInteger("State", 1);
         agent.SetDestination(new Vector3(initPos.x + Random.Range(-patrolRange, patrolRange),
                                                                     initPos.y, initPos.z + Random.Range(-patrolRange, patrolRange)));
         base.Enter();
