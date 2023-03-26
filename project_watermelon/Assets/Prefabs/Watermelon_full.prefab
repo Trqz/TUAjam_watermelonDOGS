@@ -112,3 +112,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactKey: 102
   interactDistance: 1.5
+  watermelonSFX:
+    Guid:
+      Data1: -1722923108
+      Data2: 1132205928
+      Data3: -705995117
+      Data4: 24674381
+    Path: event:/SFX/Dog/Watermelon
