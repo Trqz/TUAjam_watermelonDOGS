@@ -610,8 +610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visDist: 10
-  _visAngle: 100
-  _atkDist: 1
+  _visAngle: 90
+  _atkDist: 1.5
   _idleCooldownCounter: 0
   _idleCooldown: 2
   _idlePatrolChance: 60
