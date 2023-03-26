@@ -7,7 +7,7 @@ using UnityEngine.AI;
 public class PursueState : State
 {
     private float pursueSpeed = 5f;
-    
+    private EventReference groanSFX;
     public PursueState(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player, Vector3 _initPos, AI _ai)
                         : base(_npc, _agent, _anim, _player, _initPos, _ai)
     {

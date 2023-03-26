@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,12 @@ public class AI : MonoBehaviour
     State currentState;
     Vector3 initPos;
 
+    [SerializeField] EventReference groanSFX;
+    public float maxCounter = 15;
+    public float minCounter = 5;
+    private float currentCounter;
+    private float counter;
+
     private void Awake()
     {
         visDist = _visDist;
@@ -48,10 +55,19 @@ public class AI : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         initPos = transform.position;
         currentState = new IdleState(gameObject, agent, anim, player, initPos, this);
+
+        currentCounter = Random.Range(minCounter, maxCounter);
     }
 
     void Update()
     {
         currentState = currentState.Process();
+        if(counter >= currentCounter)
+        {
+            RuntimeManager.PlayOneShotAttached(groanSFX, gameObject);
+            counter = 0;
+            currentCounter = Random.Range(minCounter, maxCounter);
+        }
+        counter += Time.deltaTime;
     }
 }
