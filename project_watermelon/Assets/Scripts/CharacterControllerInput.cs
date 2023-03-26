@@ -34,6 +34,8 @@ public class CharacterControllerInput : MonoBehaviour
     private bool jumpRequest;
     private float jumpRequestTimer = 0.5f;
 
+    private Animator _animator;
+
     [Header("SFX Stuff")]
     [SerializeField] EventReference walkingSFX;
     EventInstance walkingI;
@@ -50,6 +52,7 @@ public class CharacterControllerInput : MonoBehaviour
     void Start()
     {
         _characterController = GetComponent<CharacterController>();
+        _animator = GetComponent<Animator>();
 
         currentGravity = gravity;
 
@@ -96,6 +99,12 @@ public class CharacterControllerInput : MonoBehaviour
                     targetRotation,
                     rotateSpeed * Time.deltaTime);
             transform.rotation = targetRotation;
+
+            _animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            _animator.SetBool("isWalking", false);
         }
     }
 
