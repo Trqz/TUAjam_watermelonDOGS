@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{4b962278-4822-475f-8ac9-fc2d8bc9c43d}">
+		<property name="name">
+			<value>Chased</value>
+		</property>
+		<relationship name="folder">
+			<destination>{25fd6e76-b28a-4108-8514-a1d7be25692e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9ec5bce0-96c7-40ed-94cb-39ad82005a60}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9ec5bce0-96c7-40ed-94cb-39ad82005a60}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.74000000953674316</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

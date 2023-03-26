@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,7 @@ public class Cogumelo : MonoBehaviour
 {
     public KeyCode interactKey = KeyCode.F;
     public CharacterHigh characterHigh;
+    [SerializeField] EventReference eatSFX;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class Cogumelo : MonoBehaviour
         Debug.Log(Vector3.Distance(transform.position, characterHigh.transform.position));
         if (Input.GetKeyDown(interactKey) && Vector3.Distance(transform.position, characterHigh.transform.position) < 2) {
             characterHigh.highAmmount += 100;
+            RuntimeManager.PlayOneShot(eatSFX);
             gameObject.SetActive(false);
         }
     }

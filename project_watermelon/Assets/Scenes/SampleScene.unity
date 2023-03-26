@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -695,8 +695,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404643431}
-  m_LocalRotation: {x: -0.074956656, y: -0.000000017863846, z: -0.0000000013427915,
-    w: 0.99718684}
+  m_LocalRotation: {x: -0.07495663, y: 0.000000017333077, z: 0.0000000013028942, w: 0.99718684}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1396,7 +1395,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501687252}
-  m_LocalRotation: {x: 0.0637613, y: -0.000000017699847, z: 0.0000000011308665, w: 0.9979652}
+  m_LocalRotation: {x: 0.0637613, y: 0.000000017699836, z: -0.0000000011308658, w: 0.9979652}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8314,6 +8313,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1717565127}
   - component: {fileID: 1717565126}
+  - component: {fileID: 1717565128}
+  - component: {fileID: 1717565129}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -8354,6 +8355,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1717565128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717565125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -38049662
+      Data2: 1220565088
+      Data3: 1520341932
+      Data4: -1004311254
+    Path: event:/Ambiences/Ambience
+  Event: 
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1717565129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717565125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccc232f4ffc98f47a7e11e3abb8065d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelMusic:
+    Guid:
+      Data1: -1625754761
+      Data2: 1303662828
+      Data3: -76294011
+      Data4: -660345415
+    Path: event:/BGM/CityTheme
 --- !u!1 &1862733504
 GameObject:
   m_ObjectHideFlags: 0
@@ -8520,7 +8570,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896684114}
-  m_LocalRotation: {x: 0.03460867, y: 0.000000017329896, z: -6.001242e-10, w: 0.999401}
+  m_LocalRotation: {x: 0.03460867, y: -0.000000017329894, z: 6.001241e-10, w: 0.999401}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8628,6 +8678,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactKey: 102
   characterHigh: {fileID: 0}
+  eatSFX:
+    Guid:
+      Data1: 1010878031
+      Data2: 1110897513
+      Data3: 1812816807
+      Data4: 1388583517
+    Path: event:/SFX/Dog/DogEating
 --- !u!1 &2103660535
 GameObject:
   m_ObjectHideFlags: 0

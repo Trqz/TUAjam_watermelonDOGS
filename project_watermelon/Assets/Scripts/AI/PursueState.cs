@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine.AI;
 public class PursueState : State
 {
     private float pursueSpeed = 5f;
-
+    
     public PursueState(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player, Vector3 _initPos, AI _ai)
                         : base(_npc, _agent, _anim, _player, _initPos, _ai)
     {
@@ -17,7 +18,7 @@ public class PursueState : State
     public override void Enter()
     {
         //Debug.Log("Pursue");
-
+        RuntimeManager.StudioSystem.setParameterByName("Chased", 1);
         pursueSpeed = ai.pursueSpeed;
         agent.speed = pursueSpeed;
 
@@ -47,6 +48,7 @@ public class PursueState : State
 
     public override void Exit()
     {
+        RuntimeManager.StudioSystem.setParameterByName("Chased", 0);
         anim.ResetTrigger("isRunning");
         agent.isStopped = true;
         base.Exit();
