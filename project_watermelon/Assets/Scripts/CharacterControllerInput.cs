@@ -13,6 +13,8 @@ public class CharacterControllerInput : MonoBehaviour
     private float movementSpeed;
     [SerializeField]
     private float rotateSpeed;
+    [SerializeField]
+    private float airMovementSpeed;
 
     [SerializeField]
     private float gravity = -10f;
@@ -91,7 +93,16 @@ public class CharacterControllerInput : MonoBehaviour
     {
         movementInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized;
         movementInput = Quaternion.Euler(0, Camera.main.transform.eulerAngles.y, 0) * movementInput;
-        _characterController.Move(movementInput * movementSpeed * Time.deltaTime);
+
+        if (isGrounded)
+        {
+            _characterController.Move(movementInput * movementSpeed * Time.deltaTime);
+        }
+        else
+        {
+            _characterController.Move(movementInput * airMovementSpeed * Time.deltaTime);
+        }
+        
 
         if (movementInput != Vector3.zero)
         {
