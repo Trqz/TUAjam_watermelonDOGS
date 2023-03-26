@@ -28,6 +28,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 296
+--- !u!114 &-9002213462630962116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dog/Watermelon
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dog/Watermelon
+  Guid:
+    Data1: -1722923108
+    Data2: 1132205928
+    Data3: -705995117
+    Data4: 24674381
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 937
 --- !u!114 &-8706720856224598256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,6 +320,7 @@ MonoBehaviour:
   - {fileID: -2164435808372181829}
   - {fileID: 2334485932790853884}
   - {fileID: 8297515727048825425}
+  - {fileID: -9002213462630962116}
   EditorParameters:
   - {fileID: -5167407536856922683}
   - {fileID: -6375883605674916346}
@@ -300,7 +328,7 @@ MonoBehaviour:
   - {fileID: 7628519628431415782}
   StringsBanks:
   - {fileID: 8337069256613824038}
-  cacheTime: 638154304769144315
+  cacheTime: 638154335447540181
   cacheVersion: 131601
 --- !u!114 &2334485932790853884
 MonoBehaviour:
@@ -454,7 +482,7 @@ MonoBehaviour:
   StudioPath: 
   Min: 0
   Max: 1
-  Default: 0
+  Default: 1
   ID:
     data1: 1596602924
     data2: 1980404082
@@ -477,10 +505,10 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638154304769099223
+  lastModified: 638154335447478674
   FileSizes:
   - Name: Desktop
-    Value: 4918496
+    Value: 4925472
   Exists: 1
 --- !u!114 &7717407857788974755
 MonoBehaviour:
@@ -575,8 +603,8 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638154304769144315
+  lastModified: 638154335447540181
   FileSizes:
   - Name: Desktop
-    Value: 1764
+    Value: 1818
   Exists: 1
