@@ -75,13 +75,13 @@ MonoBehaviour:
     Data4: -231112114
   Banks:
   - {fileID: 7628519628431415782}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 107728
 --- !u!114 &-7274104810629204156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,6 +291,7 @@ MonoBehaviour:
   - {fileID: -3089295421583424843}
   - {fileID: 4660601385263394606}
   - {fileID: -2164435808372181829}
+  - {fileID: 2334485932790853884}
   EditorParameters:
   - {fileID: -5167407536856922683}
   - {fileID: -6375883605674916346}
@@ -298,8 +299,35 @@ MonoBehaviour:
   - {fileID: 7628519628431415782}
   StringsBanks:
   - {fileID: 8337069256613824038}
-  cacheTime: 638153960382310773
+  cacheTime: 638154014357999670
   cacheVersion: 131601
+--- !u!114 &2334485932790853884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/MenuClick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/MenuClick
+  Guid:
+    Data1: -1961098030
+    Data2: 1116357947
+    Data3: 1268379538
+    Data4: -660878939
+  Banks:
+  - {fileID: 7628519628431415782}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 250
 --- !u!114 &3694787807912332329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,10 +476,10 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638153960382221169
+  lastModified: 638154014357944345
   FileSizes:
   - Name: Desktop
-    Value: 3606208
+    Value: 4840032
   Exists: 1
 --- !u!114 &7717407857788974755
 MonoBehaviour:
@@ -519,8 +547,8 @@ MonoBehaviour:
   Path: Assets/Audio/WaterMelonDogFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638153960382310773
+  lastModified: 638154014357999670
   FileSizes:
   - Name: Desktop
-    Value: 1650
+    Value: 1726
   Exists: 1

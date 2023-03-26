@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerGroup" id="{666633be-5be9-4729-9253-99c859dd695f}">
 		<property name="name">
-			<value>BGM VCA</value>
+			<value>BGM</value>
 		</property>
 		<relationship name="masters">
 			<destination>{569c837b-966f-4c43-b807-7087038fbfb6}</destination>

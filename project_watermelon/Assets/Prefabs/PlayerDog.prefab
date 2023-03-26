@@ -106,7 +106,7 @@ MonoBehaviour:
       Data3: 420569786
       Data4: 852645343
     Path: event:/SFX/Dog/DogBarking
-  keyToBark: 120
+  keyToBark: 101
 --- !u!114 &875759755279326693
 MonoBehaviour:
   m_ObjectHideFlags: 0

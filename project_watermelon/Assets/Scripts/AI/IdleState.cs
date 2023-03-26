@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class IdleState : State
 
     public override void Enter()
     {
+        RuntimeManager.StudioSystem.setParameterByName("Chased", 0);
+
         Debug.Log("Idle");
 
         idleCooldownCounter = ai.idleCooldownCounter;

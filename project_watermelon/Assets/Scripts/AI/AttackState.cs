@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,9 @@ public class AttackState : State
     }
     
     public override void Enter()
-    {  
+    {
+        RuntimeManager.StudioSystem.setParameterByName("Chased", 1);
+
         attackRotationSpeed = ai.attackRotationSpeed;
 
         anim.SetTrigger("isAttacking");
