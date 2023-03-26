@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
         int sceneNum = scene.buildIndex;
         Debug.Log(sceneNum);
 
-        if (sceneNum == 0)
+        if (sceneNum <= 1)
         {
             if (!IsPlaying(menuMusicI))
             {
