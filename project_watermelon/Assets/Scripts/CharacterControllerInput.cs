@@ -63,7 +63,7 @@ public class CharacterControllerInput : MonoBehaviour
 
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundChecker.position, groundCheckDistance, groundLayer);
+        isGrounded = Physics.CheckBox(groundChecker.position, Vector3.one * groundCheckDistance, Quaternion.identity, groundLayer);
         //isGrounded = _characterController.isGrounded;
 
         Debug.Log(isGrounded);
