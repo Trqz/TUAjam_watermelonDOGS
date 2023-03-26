@@ -83,6 +83,8 @@ public class CharacterControllerInput : MonoBehaviour
         WalkingMovement();
         
         movementSFX();
+
+        _animator.SetBool("isJumping", !isGrounded);
     }
 
     private void WalkingMovement()
@@ -115,7 +117,9 @@ public class CharacterControllerInput : MonoBehaviour
         _velocity.y = _characterController.velocity.y;
 
         if (isGrounded)
+        {
             isJumping = false;
+        }
 
         if (_velocity.y > 0 && !isJumping)
             _velocity.y = 0; //cancels velocity of running upstairs to avoid hops
